@@ -1,13 +1,14 @@
 --// create_tasks_table
 -- Migration SQL that makes the change goes here.
-create table tasks (
-    id identity primary key,
-    description text not null,
-    assigned_to bigint,
-    due timestamp,
-    completed_at timestamp,
-    created_at timestamp default current_timestamp not null,
-    foreign key (assigned_to) references assignees
+create table tasks
+(
+  id           identity primary key,
+  description  text                                not null,
+  assigned_to  bigint,
+  due          timestamp,
+  completed_at timestamp,
+  created_at   timestamp default current_timestamp not null,
+  foreign key (assigned_to) references assignees
 );
 
 insert into tasks (description, assigned_to, due)

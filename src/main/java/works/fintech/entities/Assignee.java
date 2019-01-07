@@ -1,25 +1,24 @@
-package com.sodep.entities;
-
-import java.io.Serializable;
-import java.util.Date;
+package works.fintech.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "assignees")
 public final class Assignee implements Serializable {
-   
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue
-	private Long id;
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue
+    private Long id;
     private String name;
     private String email;
     private Date createdAt;
